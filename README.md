@@ -443,7 +443,7 @@ EBS snapshots are more efficient and cost-effective solution compared to __disk 
 
 EBS volumes can only be attached to an EC2 instance in the __same Availability Zone__.
 
-__EBS snapshot creation__ — In usual scenarios EBS volume snapshots can be created at the same time it's in usage. But when using RAID configuraions, there are additional complexities and we should stop every IO operation and flush the cache before taking a snapshot.
+__EBS snapshot creation__ — In usual scenarios EBS volume snapshots can be created at the same time it's in usage. But when using RAID configurations, there are additional complexities and we should stop every IO operation and flush the cache before taking a snapshot.
 
 __Cloudwatch alarm actions__ can automatically start, stop or reboot EC2 instances based on alarms.
 
@@ -496,7 +496,7 @@ Note that AMI ID is set during creation of launch configuration and cannot be mo
 
 __Default metric types for a load balancer__ —
 1. Request count per target.
-2. Average CPU utlization.
+2. Average CPU utilization.
 3. Network in.
 4. Network out.
 
@@ -517,7 +517,7 @@ ASG __Dynamic Scaling Policies__ —
 
 If you are scaling based on a utilization metric that increases or decreases proportionally to the number of instances in an Auto Scaling group, we recommend that you use target tracking scaling policies. Otherwise, we recommend that you use step scaling policies. 
 
-The ELB service does not consume an IP address, it's the nodes that cosume one IP address each.
+The ELB service does not consume an IP address, it's the nodes that consume one IP address each.
 
 __Auto-scaling__ ensures —
 - Fault tolerance
@@ -872,6 +872,7 @@ __AWS Storage Gateways__—
 1. File gateway
 2. Volume gateway: Cached volumes
 3. Volume gateway: Stored volumes
+4. Tape gateway
 
 
 
@@ -897,7 +898,7 @@ We can configure __IAM policies__ that allows __access to specific tags__.
 __Connecting AWS SSO to On-Premise Active Directory__ —
 
 - __Two-way trust relationship__: __Preferred__. Users can do everything from both portals.
-- __AD connector__: SSO does not cache user credentials. Users can't reset password from SSO protal, have to do it from on-premise portal.
+- __AD connector__: SSO does not cache user credentials. Users can't reset password from SSO portal, have to do it from on-premise portal.
 
 For __two-step verification__, SSO sends __code to registered email__. It can set to be either —
 
